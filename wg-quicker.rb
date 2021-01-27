@@ -5,24 +5,25 @@
 class WgQuicker < Formula
   desc ""
   homepage "https://git.xsfx.dev/xsteadfastx/wg-quicker"
-  version "0.3.4"
+  version "0.3.5"
   bottle :unneeded
   depends_on :linux
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/xsteadfastx/wg-quicker/releases/download/v0.3.4/wg-quicker_0.3.4_linux_amd64.tar.gz"
-    sha256 "51f688e8a29e99fcb51165a296daeea8af9b381a4b253cbeae84538d1af32f14"
+    url "https://github.com/xsteadfastx/wg-quicker/releases/download/v0.3.5/wg-quicker_0.3.5_linux_amd64.tar.gz"
+    sha256 "8b921be421f573708a6715cc457a8402301d9f169554854c610b5056f7753d6d"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/xsteadfastx/wg-quicker/releases/download/v0.3.4/wg-quicker_0.3.4_linux_armv6.tar.gz"
-    sha256 "cb1f2685b3884d9b1d4e445c140775148cfcf2c92a73887eb1907c5ddfad88ce"
+    url "https://github.com/xsteadfastx/wg-quicker/releases/download/v0.3.5/wg-quicker_0.3.5_linux_armv6.tar.gz"
+    sha256 "5dddbbf256f206c7f5053eba484e0944fbaecd5330ade2cddd266018dd9e4dac"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/xsteadfastx/wg-quicker/releases/download/v0.3.4/wg-quicker_0.3.4_linux_arm64.tar.gz"
-    sha256 "6e9ec6666ab8b89afd0ba34234093b0bc8c7e57e60cd88fee96ff428c57b43da"
+    url "https://github.com/xsteadfastx/wg-quicker/releases/download/v0.3.5/wg-quicker_0.3.5_linux_arm64.tar.gz"
+    sha256 "46f75f6a2f02d9afeade7fcf96746c3bdcb044e88a2c166c52062959be269996"
   end
 
   def install
+    bin.install "wg-quicker"
   end
 
   test do
