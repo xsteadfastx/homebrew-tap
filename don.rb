@@ -5,22 +5,22 @@
 class Don < Formula
   desc ""
   homepage "https://git.xsfx.dev/xsteadfastx/don"
-  version "1.1.3"
+  version "1.2.0"
   bottle :unneeded
   depends_on :linux
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/xsteadfastx/don/releases/download/v1.1.3/don_1.1.3_linux_amd64.tar.gz"
-      sha256 "7d4db00e19db5306d3784225708404162c08c1c0f02a625e24f9316913ac1c2e"
+      url "https://github.com/xsteadfastx/don/releases/download/v1.2.0/don_1.2.0_linux_amd64.tar.gz"
+      sha256 "3249956bde93d7c42af8fa62d86fb81736c4abc96fdb32d15090d1bdb3ed176b"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/xsteadfastx/don/releases/download/v1.1.3/don_1.1.3_linux_armv6.tar.gz"
-      sha256 "4ed4dd59f4ba5a077b0e1736aa513fdb902f2ab9835d1fae3f8113899e8bc4d6"
+      url "https://github.com/xsteadfastx/don/releases/download/v1.2.0/don_1.2.0_linux_armv6.tar.gz"
+      sha256 "3924069ea474c764ab88782ce5c69faceee8b782ad360300bc9be9f486b2ce70"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xsteadfastx/don/releases/download/v1.1.3/don_1.1.3_linux_arm64.tar.gz"
-      sha256 "c447422c7de2fc1ef44009d85e3dfa1b889390b8c36f580bd8a174ac872a0f83"
+      url "https://github.com/xsteadfastx/don/releases/download/v1.2.0/don_1.2.0_linux_arm64.tar.gz"
+      sha256 "1449f5a0e4a66fb4d087c59dbc60b1fc9f4d555ab08465d2be49f1d43ec43f01"
     end
   end
 
